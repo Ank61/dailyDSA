@@ -87,10 +87,6 @@ export default function Features() {
                 <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
                   Amazon Interview Questions
                 </h5>
-                {/* <p className="text-gray-600 dark:text-gray-300">
-                  Neque Dolor, fugiat non cum doloribus aperiam voluptates
-                  nostrum.
-                </p> */}
               </div>
               <a
                 href="#"

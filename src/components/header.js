@@ -75,7 +75,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/problems" legacyBehavior>
+                    <Link href="/discuss" legacyBehavior>
                       <a
                         href="#solution"
                         className="block md:px-4 transition hover:text-primary"
@@ -85,7 +85,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/problems" legacyBehavior>
+                    <Link href="/contest" legacyBehavior>
                       <a
                         href="#testimonials"
                         className="block md:px-4 transition hover:text-primary"
@@ -95,7 +95,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/problems" legacyBehavior>
+                    <Link href="/blog" legacyBehavior>
                       <a
                         href="#blog"
                         className="block md:px-4 transition hover:text-primary"
