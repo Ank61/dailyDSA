@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { useRouter } from "next/router";
-
+import Link from "next/link";
 export default function Problems() {
   const router = useRouter();
 
@@ -21,7 +21,7 @@ export default function Problems() {
                     Arrays
                   </h5>
                 </div>
-                <a
+                <Link
                   href="/problems/array"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -40,7 +40,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -50,7 +50,7 @@ export default function Problems() {
                     Backtracking
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -67,7 +67,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -77,7 +77,7 @@ export default function Problems() {
                     Dynamic Programing
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -94,7 +94,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -104,7 +104,7 @@ export default function Problems() {
                     String
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -121,7 +121,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -131,7 +131,7 @@ export default function Problems() {
                     Hashing
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -148,7 +148,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -158,7 +158,7 @@ export default function Problems() {
                     Stacks & Queues
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -175,7 +175,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -185,7 +185,7 @@ export default function Problems() {
                     Trees
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -202,7 +202,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -212,7 +212,7 @@ export default function Problems() {
                     Graphs
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -229,7 +229,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer">
@@ -239,7 +239,7 @@ export default function Problems() {
                     Greedy
                   </h5>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
@@ -256,7 +256,7 @@ export default function Problems() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
