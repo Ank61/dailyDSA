@@ -2,14 +2,54 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import Box from "@mui/material/Box";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { styled } from "@mui/material/styles";
+import { arrayData } from "@/data/arrayData";
+import TablePagination from "@mui/material/TablePagination";
+import { useState } from "react";
+import { randomQuestion } from "@/data/randomData";
+
 export default function Problems() {
   const router = useRouter();
+  const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+      backgroundColor: "#ebe6ff",
+      color: theme.palette.common.black,
+      fontWeight: 600,
+      fontSize: 15,
+      //   fontFamily: "ui-sans-serif",
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 14,
+      border: 0,
+    },
+  }));
+
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    "&:nth-of-type(odd)": {
+      //   backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    "&:last-child td, &:last-child th": {
+      //   border: 0,
+    },
+  }));
 
   return (
     <>
       <Header />
       <div className="pt-32 text-gray-600 dark:text-gray-300" id="testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+          <div className="text-2xl font-bold font-sans text-violet-600 mb-7">
+            Topic Based Questions
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
               className="group relative bg-white dark:bg-gray-800 border-2  border-violet-100 rounded-2xl transition hover:z-[1] hover:shadow-2xl hover:shadow-violet-600/10 cursor-pointer"
@@ -260,6 +300,76 @@ export default function Problems() {
               </div>
             </div>
           </div>
+          <div className="text-2xl font-bold font-sans text-violet-600 mb-3 mt-12">
+            All Topics
+          </div>
+          <TableContainer
+            component={Paper}
+            className="lg:w-8/12 lg:mx-auto mt-14 border-0 flex justify-center item-center"
+          >
+            <Table sx={{ minWidth: 400 }} aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  {/* <StyledTableCell>LeetCode Id</StyledTableCell> */}
+                  <StyledTableCell align="left">Title</StyledTableCell>
+                  <StyledTableCell align="left">Acceptance</StyledTableCell>
+                  <StyledTableCell align="left">Difficulty</StyledTableCell>
+                  {/* <StyledTableCell align="left">Status</StyledTableCell> */}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {randomQuestion.questions.map((row, index) => (
+                  <StyledTableRow key={index}>
+                    {/* <StyledTableCell component="th" scope="row">
+                      {row.questionId}
+                    </StyledTableCell> */}
+                    <StyledTableCell
+                      align="left"
+                      className="hover:text-violet-700 cursor-pointer"
+                      onClick={() =>
+                        window.open(
+                          `https://leetcode.com/problems/${row.titleSlug}/`,
+                          "_blank",
+                          "noopener,noreferrer"
+                        )
+                      }
+                    >
+                      {row.title}
+                    </StyledTableCell>
+                    <StyledTableCell align="">{row.acRate}</StyledTableCell>
+                    <StyledTableCell align="center">
+                      {row.difficulty === "Easy" ? (
+                        <div className="pl-3 pr-3 font-semibold	 pt-1 pb-1 w-fit bg-green-100 text-green-500 text-xs rounded-2xl">
+                          Easy
+                        </div>
+                      ) : row.difficulty === "Hard" ? (
+                        <div className="pl-3 pr-3 font-semibold pt-1 pb-1 w-fit bg-red-100 text-red-500 text-xs rounded-2xl">
+                          Hard
+                        </div>
+                      ) : (
+                        <div className="pl-3 pr-3  font-semibold pt-1 pb-1 w-fit bg-yellow-100 text-yellow-500 text-xs rounded-2xl">
+                          Medium
+                        </div>
+                      )}
+                    </StyledTableCell>
+                    {/* <StyledTableCell align="center">
+                      <input type="checkbox" className="" />
+                    </StyledTableCell> */}
+                  </StyledTableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          {/* <TablePagination
+            className="lg:w-8/12 lg:mx-auto"
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={arrayData.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          /> */}
         </div>
       </div>
       <Footer />

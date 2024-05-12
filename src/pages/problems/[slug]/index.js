@@ -63,7 +63,7 @@ export default function ProblemName() {
       <Header />
       <div className="pt-28 text-gray-600 dark:text-gray-300" id="testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 ">
-          <div className="flex flex-row lg:w-8/12 lg:mx-auto">
+          <div className="flex flex-row ">
             <Image src={Bookmark} alt="logo" className="w-7 h-6 mt-1.5" />
             <p className="ml-2 text-2xl font-medium font-sans ">
               {router.query.slug &&
